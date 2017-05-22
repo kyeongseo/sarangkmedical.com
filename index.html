@@ -35,7 +35,11 @@
             showMonthAfterYear: true,
             changeMonth: true,
             changeYear: true,
-            yearSuffix: '년'
+            yearSuffix: '년',
+            onSelect: function(dateText){
+                var date = $(this).val();
+                date = date.substring(date.length-1,date.length);
+            }
         });
 
         $("#time").timepicker({
